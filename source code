@@ -1,0 +1,25 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+
+int main() {
+    std::string word;
+    std::string msg;
+
+    std::cout << "enter word" << std::endl;
+    std::cin >> msg;
+
+    word = "wordle";
+
+    for (int i = 0; i < msg.length(); ++i) {
+        if (word.substr(i, 1) == msg.substr(i, 1)) {
+            std::cout << msg.substr(i, 1) << " is right. ";
+        }
+        else
+        {
+            std::cout << msg.substr(i, 1) << " is wrong. ";
+        }
+    }
+
+    std::cin >> msg;
+}
